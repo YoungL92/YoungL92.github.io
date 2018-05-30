@@ -22,7 +22,7 @@
 <script type="text/javascript">
 
   document.getElementById('LoginWithAmazon').onclick = function() {
-    options = { scope : 'profile' };
+    options = { scope : 'cpc_advertising:campaign_management' };
     amazon.Login.authorize(options, 'https://youngl92.github.io');
     return false;
   };

@@ -1,16 +1,7 @@
 <html>
 <body>
-  
-  <a href="#" id="LoginWithAmazon">
-  <img border="0" alt="Login with Amazon"
-    src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
-    width="156" height="32" />
-</a>
-  <a id="Logout">Logout</a>
-  
   <div id="amazon-root"></div>
 <script type="text/javascript">
-
   window.onAmazonLoginReady = function() {
     amazon.Login.setClientId('amzn1.application-oa2-client.ee12a83f7fd342398b50dd10af1a9090');
   };
@@ -20,7 +11,20 @@
     a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
     d.getElementById('amazon-root').appendChild(a);
   })(document);
-
+</script>
+  
+<a href="#" id="LoginWithAmazon">
+<img border="0" alt="Login with Amazon"
+  src="https://images-na.ssl-images-amazon.com/images/G/01/lwa/btnLWA_gold_156x32.png"
+  width="156" height="32" />
+</a>
+  
+<script type="text/javascript">
+  document.getElementById('LoginWithAmazon').onclick = function() {
+    options = { scope : 'profile' };
+    amazon.Login.authorize(options, 'https://youngl92.github.io');
+    return false;
+  };
 </script>
   
 </body>

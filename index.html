@@ -7,5 +7,21 @@
     width="156" height="32" />
 </a>
   <a id="Logout">Logout</a>
+  
+  <div id="amazon-root"></div>
+<script type="text/javascript">
+
+  window.onAmazonLoginReady = function() {
+    amazon.Login.setClientId('amzn1.application-oa2-client.ee12a83f7fd342398b50dd10af1a9090');
+  };
+  (function(d) {
+    var a = d.createElement('script'); a.type = 'text/javascript';
+    a.async = true; a.id = 'amazon-login-sdk';
+    a.src = 'https://api-cdn.amazon.com/sdk/login1.js';
+    d.getElementById('amazon-root').appendChild(a);
+  })(document);
+
+</script>
+  
 </body>
 </html>

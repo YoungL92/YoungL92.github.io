@@ -1,6 +1,6 @@
 <html>
 <body>
-  <div id="amazon-root"></div>
+<div id="amazon-root"></div>
 <script type="text/javascript">
   window.onAmazonLoginReady = function() {
     amazon.Login.setClientId('amzn1.application-oa2-client.ee12a83f7fd342398b50dd10af1a9090');
@@ -25,6 +25,13 @@
     amazon.Login.authorize(options, 'https://youngl92.github.io');
     return false;
   };
+</script>
+  
+<a id="Logout">Logout</a>
+<script type="text/javascript">
+  document.getElementById('Logout').onclick = function() {
+    amazon.Login.logout();
+};
 </script>
   
 </body>
